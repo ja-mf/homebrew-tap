@@ -10,12 +10,12 @@ class R4dio < Formula
 
   on_arm do
     url "https://github.com/ja-mf/r4dio/releases/download/v1.2.7-rc.1/r4dio-macos-arm64-cli.tar.gz"
-    sha256 "882ec5994e2ca6b85a0cc2484bc6df72a3c27fc7e7802532154615b967b7e284"
+    sha256 "8ba7c62eaadcf52408a9c3b1aec8bb5819f0821a9740ccfea83835e4124a4f75"
   end
 
   on_intel do
     url "https://github.com/ja-mf/r4dio/releases/download/v1.2.7-rc.1/r4dio-macos-x86_64-cli.tar.gz"
-    sha256 "6f4acfc7d5d41ea28317a3a27c1e50e16c78f60e4e79c7cd81387385601561c0"
+    sha256 "be9b6ce3a2e4a81d1cd2a824db614db7301f8875e97fd9c48dabc6f4243f28c8"
   end
 
   def install
