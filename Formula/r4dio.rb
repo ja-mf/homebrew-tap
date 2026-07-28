@@ -10,18 +10,19 @@ class R4dio < Formula
 
   on_arm do
     url "https://github.com/ja-mf/r4dio/releases/download/v1.2.7-rc.1/r4dio-macos-arm64-cli.tar.gz"
-    sha256 "ebc049896d89d9ce13052b2882afa85eff637dce7fb319ae940cc4ddcfa3cb2f"
+    sha256 "882ec5994e2ca6b85a0cc2484bc6df72a3c27fc7e7802532154615b967b7e284"
   end
 
   on_intel do
     url "https://github.com/ja-mf/r4dio/releases/download/v1.2.7-rc.1/r4dio-macos-x86_64-cli.tar.gz"
-    sha256 "9ebcc512ac74e60b1bb301293506a042736f013383df1e8199ac5e563250304a"
+    sha256 "6f4acfc7d5d41ea28317a3a27c1e50e16c78f60e4e79c7cd81387385601561c0"
   end
 
   def install
-    # vibra lives next to the resolved r4dio binary in libexec so r4dio's
-    # beside-the-exe discovery finds it (song recognition keeps working).
-    libexec.install "r4dio", "vibra", "LICENSE"
+    # vibra and stations.toml live next to the resolved r4dio binary in
+    # libexec so r4dio's beside-the-exe discovery finds them (song
+    # recognition and the bundled station list keep working).
+    libexec.install "r4dio", "vibra", "stations.toml", "LICENSE"
     bin.install_symlink libexec/"r4dio"
   end
 
